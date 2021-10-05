@@ -39,19 +39,53 @@ linreg <- setRefClass("linreg",
                                     dof="integer",
                                     residualvariance="numeric",
                                     stnresid="numeric",
-                                    betavariance=
+                                    betavariance="matrix",
                                     bb="numeric",
                                     tvalues="matrix",
                                     pvalues="matrix",
                                     standradizedresiduals="matrix",
-                                    sqtresiduals="matrix"
+                                    sqtresiduals="matrix",
+                                    export_formula = "formula",
+                                    export_data = "character"
                                     ),
 
 
                       methods= list(
-                        print=function(){},
-                        plot =function(){},
-                        resid=function(){},
+                        initialize = function(formula, data){
+                          x <<- model.matrix(formula, data)
+                          y <<- as.matrix(data[all.vars(formula)[1]])
+                          Xt <<- t(x)
+                          xtx <<- solve(xt %*% x)
+                          betaestimated <<- xtx %*% xt %*% y
+                          yfit <<- x %*% betaestimated
+                          residual <<- y - yfit
+                          nparameters <<- length(betaestimated)
+                          dof <<- length(y) - nparameters
+                          residualt <<- t(residual)
+                          residualvariance <<- as.numeric((residualt %*% residual) / dof)
+                          residualstd <<- sqrt(residualvariance)
+                          betavariance <<- residualvariance * xtx
+                          bb <<- diag(betavariance)
+                          tvalues <<- betaestimated/sqrt(bb)
+                          pvalues <<- 2 * pt(abs(tvalues), dof, lower.tail = FALSE)
+                          standradizedresiduals <<- residual / sd(residual)
+                          sqrtstresiduals <<- sqrt(abs(standradizedresiduals))
+
+                          export_formula <<- formula
+                          export_data <<- deparse(substitute(data))
+                        },
+                        print=function(){
+                          cat(paste("linreg(formula = ", format(export_formula), ", data = ", export_data , ")\n\n ", sep = ""))
+                          setNames(round(betaestimates[1:nrow(betaestimates)],3),rownames(betaestimates))
+
+
+                        },
+                        plot =function(){
+
+                        },
+                        resid = function(){
+                          return(as.vector(residual))
+                        },
                         pred=function(){},
                         coef=function(){},
                         summary=function(){}
