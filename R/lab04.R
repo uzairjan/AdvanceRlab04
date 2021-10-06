@@ -1,35 +1,40 @@
 #' Create a linreg object
+#'
+#' @field formula .
+#' @field data .
+#' @field X .
+#' @field Y .
+#' @field beta_estimates .
+#' @field esti_y .
+#' @field residual .
+#' @field t_params .
+#' @field deg_freedom .
+#' @field residualt .
+#' @field resid_var .
+#' @field residualstd .
+#' @field betavariance .
+#' @field bb .
+#' @field tvalues .
+#' @field pvalues .
+#' @field standardizedresiduals .
+#' @field sqrtstresiduals .
+#' @field export_formula .
+#' @field export_data .
+#'
 #' @param formula formula for linear model
 #' @param data the dataset provided
-#' @field formula, formula for the linear model
-#' @field data, the dataset provided
-#' @field X, for containing data
-#' @field Y, dependent variable
-#' @field beta_estimates, estimates of the parameters
-#' @field esti_y, estimated y values
-#' @field residual, residuals computed by subtracting esti_y from actual y values
-#' @field t_params, number of parameters
-#' @field resid_var, variance of the residuals
-#' @field residualstd, standard deviation of residuals
-#' @field betavariance, variance of beta estimates
-#' @field bb, diagonal of betavariance matrix
-#' @field tvalues, comptued t values per parameter
-#' @field pvalues, pvalues computed according to tvalues and pt function
-#' @field standardizedresiduals, standardized residuals
-#' @field sqrtresiduals, the square root of standardizedresiduals
 #' @return the output from the \code{\link{linreg}}
 #' \dontrun{
 #' linreg("hello")
 #' }
 #' @importFrom ggplot2 theme_linedraw theme element_blank element_text stat_summary ggtitle xlab scale_x_continuous ggplot aes geom_point geom_smooth labs %+replace% theme_bw rel element_rect element_text element_line margin unit
+#' @exportClass linreg
 #' @export linreg
 linreg <- setRefClass("linreg",
                       fields = list(formula="formula",
                                     data="data.frame",
                                     X = "matrix",
                                     Y="matrix",
-                                    Xt="matrix",
-                                    XtX="matrix",
                                     beta_estimates = "matrix",
                                     esti_y="matrix",
                                     residual="matrix",

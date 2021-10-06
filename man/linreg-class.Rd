@@ -22,37 +22,45 @@ Create a linreg object
 \section{Fields}{
 
 \describe{
-\item{\code{formula,}}{formula for the linear model}
+\item{\code{formula}}{.}
 
-\item{\code{data,}}{the dataset provided}
+\item{\code{data}}{.}
 
-\item{\code{X,}}{for containing data}
+\item{\code{X}}{.}
 
-\item{\code{Y,}}{dependent variable}
+\item{\code{Y}}{.}
 
-\item{\code{beta_estimates,}}{estimates of the parameters}
+\item{\code{beta_estimates}}{.}
 
-\item{\code{esti_y,}}{estimated y values}
+\item{\code{esti_y}}{.}
 
-\item{\code{residual,}}{residuals computed by subtracting esti_y from actual y values}
+\item{\code{residual}}{.}
 
-\item{\code{t_params,}}{number of parameters}
+\item{\code{t_params}}{.}
 
-\item{\code{resid_var,}}{variance of the residuals}
+\item{\code{deg_freedom}}{.}
 
-\item{\code{residualstd,}}{standard deviation of residuals}
+\item{\code{residualt}}{.}
 
-\item{\code{betavariance,}}{variance of beta estimates}
+\item{\code{resid_var}}{.}
 
-\item{\code{bb,}}{diagonal of betavariance matrix}
+\item{\code{residualstd}}{.}
 
-\item{\code{tvalues,}}{comptued t values per parameter}
+\item{\code{betavariance}}{.}
 
-\item{\code{pvalues,}}{pvalues computed according to tvalues and pt function}
+\item{\code{bb}}{.}
 
-\item{\code{standardizedresiduals,}}{standardized residuals}
+\item{\code{tvalues}}{.}
 
-\item{\code{sqrtresiduals,}}{the square root of standardizedresiduals}
+\item{\code{pvalues}}{.}
+
+\item{\code{standardizedresiduals}}{.}
+
+\item{\code{sqrtstresiduals}}{.}
+
+\item{\code{export_formula}}{.}
+
+\item{\code{export_data}}{.}
 }}
 
 \section{Methods}{
