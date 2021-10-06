@@ -4,6 +4,9 @@
 # lab4
 
 <!-- badges: start -->
+
+[![Travis build
+status](https://travis-ci.com/uzairjan/AdvanceRlab04.svg?branch=main)](https://travis-ci.com/uzairjan/AdvanceRlab04)
 <!-- badges: end -->
 
 The goal of this project is to create an R package for multiple linear
@@ -31,6 +34,7 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(lab4)
+#> Loading required package: ggplot2
 ## basic example code
 ```
 

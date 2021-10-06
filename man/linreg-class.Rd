@@ -11,7 +11,10 @@
 \item{data}{the dataset provided}
 }
 \value{
-empty
+the output from the \code{\link{linreg}}
+\dontrun{
+linreg("hello")
+}
 }
 \description{
 Create a linreg object

@@ -1,6 +1,6 @@
 Package: lab4
 Type: Package
-Title: What the Package Does (Title Case)
+Title: linear regression package
 Version: 0.1.0
 Author: Group 25
 Maintainer: The package maintainer <muhammaduzair751@gmail.com> <iu68559@gmail.com> <ishtiaqahmad0331@gmail.com>
@@ -14,8 +14,7 @@ Roxygen: list(markdown = TRUE)
 Suggests: 
     knitr,
     rmarkdown,
-    rmarkdown,
-    testthat (>= 3.0.0)
-Config/testthat/edition: 3
+    testthat (>= 3.0.0),
+    Config
 Depends: ggplot2
 VignetteBuilder: knitr

@@ -17,7 +17,10 @@
 #' @field pvalues, pvalues computed according to tvalues and pt function
 #' @field standardizedresiduals, standardized residuals
 #' @field sqrtresiduals, the square root of standardizedresiduals
-#' @return empty
+#' @return the output from the \code{\link{linreg}}
+#' \dontrun{
+#' linreg("hello")
+#' }
 #' @importFrom ggplot2 theme_linedraw theme element_blank element_text stat_summary ggtitle xlab scale_x_continuous ggplot aes geom_point geom_smooth labs %+replace% theme_bw rel element_rect element_text element_line margin unit
 #' @export linreg
 linreg <- setRefClass("linreg",
