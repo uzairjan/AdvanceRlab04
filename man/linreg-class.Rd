@@ -4,14 +4,57 @@
 \name{linreg-class}
 \alias{linreg-class}
 \alias{linreg}
-\title{Multiple linear regression package in R}
-\value{
+\title{Create a linreg object}
+\arguments{
+\item{formula}{formula for linear model}
 
+\item{data}{the dataset provided}
+}
+\value{
+empty
 }
 \description{
-Multiple linear regression package in R
+Create a linreg object
 }
+\section{Fields}{
 
-\examples{
-linreg()
-}
+\describe{
+\item{\code{formula,}}{formula for the linear model}
+
+\item{\code{data,}}{the dataset provided}
+
+\item{\code{X,}}{for containing data}
+
+\item{\code{Y,}}{dependent variable}
+
+\item{\code{beta_estimates,}}{estimates of the parameters}
+
+\item{\code{esti_y,}}{estimated y values}
+
+\item{\code{residual,}}{residuals computed by subtracting esti_y from actual y values}
+
+\item{\code{t_params,}}{number of parameters}
+
+\item{\code{resid_var,}}{variance of the residuals}
+
+\item{\code{residualstd,}}{standard deviation of residuals}
+
+\item{\code{betavariance,}}{variance of beta estimates}
+
+\item{\code{bb,}}{diagonal of betavariance matrix}
+
+\item{\code{tvalues,}}{comptued t values per parameter}
+
+\item{\code{pvalues,}}{pvalues computed according to tvalues and pt function}
+
+\item{\code{standardizedresiduals,}}{standardized residuals}
+
+\item{\code{sqrtresiduals,}}{the square root of standardizedresiduals}
+}}
+
+\section{Methods}{
+
+\describe{
+\item{\code{print()}}{Prints Model information}
+}}
+

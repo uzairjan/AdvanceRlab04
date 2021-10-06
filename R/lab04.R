@@ -20,7 +20,6 @@
 #' @return empty
 #' @importFrom ggplot2 theme_linedraw theme element_blank element_text stat_summary ggtitle xlab scale_x_continuous ggplot aes geom_point geom_smooth labs %+replace% theme_bw rel element_rect element_text element_line margin unit
 #' @export linreg
-
 linreg <- setRefClass("linreg",
                       fields = list(formula="formula",
                                     data="data.frame",
@@ -80,7 +79,7 @@ linreg <- setRefClass("linreg",
                           export_data <<- deparse(substitute(data))
                         },
                         print = function(){
-                          "Prints information about model"
+                          "Prints Model information"
                           cat(paste("linreg(formula = ", format(export_formula), ", data = ", export_data , ")\n\n ", sep = ""))
                           setNames(round(beta_estimates[1:nrow(beta_estimates)],3),rownames(beta_estimates))
                         },
@@ -183,5 +182,4 @@ linreg <- setRefClass("linreg",
                         }
                       ))
 
-linreg_mod <- linreg$new(Petal.Length~Sepal.Width+Sepal.Length, data=iris)
-linreg_mod$pred()
+
