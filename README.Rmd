@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # lab4
 
 <!-- badges: start -->
+[![Travis build status](https://travis-ci.com/uzairjan/AdvanceRlab04.svg?branch=main)](https://travis-ci.com/uzairjan/AdvanceRlab04)
 <!-- badges: end -->
 
 The goal of this project is to create an R package for multiple linear regression
