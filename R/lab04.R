@@ -20,13 +20,10 @@
 #' @field sqrtstresiduals .
 #' @field export_formula .
 #' @field export_data .
-#'
+#' @import ggplot2
 #' @param formula formula for linear model
 #' @param data the dataset provided
 #' @return the output from the \code{\link{linreg}}
-#' \dontrun{
-#' linreg("hello")
-#' }
 #' @importFrom ggplot2 theme_linedraw theme element_blank element_text stat_summary ggtitle xlab scale_x_continuous ggplot aes geom_point geom_smooth labs %+replace% theme_bw rel element_rect element_text element_line margin unit
 #' @exportClass linreg
 #' @export linreg
