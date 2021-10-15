@@ -1,21 +1,21 @@
 #' Create a linreg object
 #'
-#' @field formula .
-#' @field data .
-#' @field X .
-#' @field Y .
-#' @field beta_estimates .
-#' @field esti_y .
-#' @field residual .
-#' @field t_params .
-#' @field deg_freedom .
-#' @field residualt .
-#' @field resid_var .
-#' @field residualstd .
-#' @field betavariance .
-#' @field bb .
-#' @field tvalues .
-#' @field pvalues .
+#' @field formula: Linear regression formula .
+#' @field data: Recieved data from user.
+#' @field X: matrix for containing all the data.
+#' @field Y: Response variable.
+#' @field beta_estimates matrix:Estimates the variability of the beta coefficients .
+#' @field esti_y: Estimation of the Y values.
+#' @field residual residuals computed by subtracting esti_y from y values.
+#' @field t_params  number of parameters.
+#' @field deg_freedom: Degrees of freedom .
+#' @field residualt for containing calculated Variances value .
+#' @field resid_var numeric:Estimates of the variance of the error variable .
+#' @field residualstd standard deviation of residuals.
+#' @field betavariance variance of beta estimates.
+#' @field b_diag diagonal of betavariance matrix.
+#' @field tvalues matrix:T-values for significance of coefficients.
+#' @field pvalues: computed according to tvalues.
 #' @field standardizedresiduals .
 #' @field sqrtstresiduals .
 #' @field export_formula .
@@ -41,7 +41,7 @@ linreg <- setRefClass("linreg",
                                     resid_var="numeric",
                                     residualstd = "numeric",
                                     betavariance = "matrix",
-                                    bb = "numeric",
+                                    b_diag = "numeric",
                                     tvalues="matrix",
                                     pvalues= "matrix",
                                     standardizedresiduals ="matrix",
@@ -70,9 +70,9 @@ linreg <- setRefClass("linreg",
                           resid_var <<- as.numeric((residualt %*% residual) / deg_freedom)
                           residualstd <<- sqrt(resid_var)
                           betavariance <<- resid_var * solve((t(X)) %*%X)
-                          bb <<- diag(betavariance)
+                          b_diag <<- diag(betavariance)
                           # t-values
-                          tvalues <<- beta_estimates/sqrt(bb)
+                          tvalues <<- beta_estimates/sqrt(b_diag)
                           # p-values
                           pvalues <<- 2 * pt(abs(tvalues), deg_freedom, lower.tail = FALSE)
                           # Standardized residuals for summary

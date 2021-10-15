@@ -19,37 +19,37 @@ Create a linreg object
 \section{Fields}{
 
 \describe{
-\item{\code{formula}}{.}
+\item{\code{formula:}}{Linear regression formula .}
 
-\item{\code{data}}{.}
+\item{\code{data:}}{Recieved data from user.}
 
-\item{\code{X}}{.}
+\item{\code{X:}}{matrix for containing all the data.}
 
-\item{\code{Y}}{.}
+\item{\code{Y:}}{Response variable.}
 
-\item{\code{beta_estimates}}{.}
+\item{\code{beta_estimates}}{matrix:Estimates the variability of the beta coefficients .}
 
-\item{\code{esti_y}}{.}
+\item{\code{esti_y:}}{Estimation of the Y values.}
 
-\item{\code{residual}}{.}
+\item{\code{residual}}{residuals computed by subtracting esti_y from y values.}
 
-\item{\code{t_params}}{.}
+\item{\code{t_params}}{number of parameters.}
 
-\item{\code{deg_freedom}}{.}
+\item{\code{deg_freedom:}}{Degrees of freedom .}
 
-\item{\code{residualt}}{.}
+\item{\code{residualt}}{for containing calculated Variances value .}
 
-\item{\code{resid_var}}{.}
+\item{\code{resid_var}}{numeric:Estimates of the variance of the error variable .}
 
-\item{\code{residualstd}}{.}
+\item{\code{residualstd}}{standard deviation of residuals.}
 
-\item{\code{betavariance}}{.}
+\item{\code{betavariance}}{variance of beta estimates.}
 
-\item{\code{bb}}{.}
+\item{\code{b_diag}}{diagonal of betavariance matrix.}
 
-\item{\code{tvalues}}{.}
+\item{\code{tvalues}}{matrix:T-values for significance of coefficients.}
 
-\item{\code{pvalues}}{.}
+\item{\code{pvalues:}}{computed according to tvalues.}
 
 \item{\code{standardizedresiduals}}{.}
 

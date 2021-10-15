@@ -6,10 +6,10 @@
 <!-- badges: start -->
 
 [![Travis build
-status](https://travis-ci.com/uzairjan/AdvanceRlab04.svg?branch=main)](https://travis-ci.com/uzairjan/AdvanceRlab04)
+status](https://travis-ci.com/uzairjan/AdvanceRlab04.svg?branch=main)](https://api.travis-ci.com/v3/job/543105228/log.txt)
 <!-- badges: end -->
 
-The goal of this project is to create an R package for multiple linear
+The goal of this project is to create an R package for linear
 regression
 
 ## Installation

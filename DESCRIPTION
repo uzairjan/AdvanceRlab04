@@ -4,8 +4,7 @@ Title: linear regression package
 Version: 0.1.0
 Author: Group 25
 Maintainer: The package maintainer <muhammaduzair751@gmail.com>, <iu68559@gmail.com>, <ishtiaqahmad0331@gmail.com>
-Description: More about what it does
-    Use four spaces when indenting paragraphs within the Description.
+Description: This package used to calcuate linear regression and creates a new class called "Linreg". It consists on an alternative implemantation of the linear regression algorithm.
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
