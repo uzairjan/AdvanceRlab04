@@ -11,7 +11,7 @@
 \item{data}{the dataset provided}
 }
 \value{
-the output from the \code{\link{linreg}}
+the output from the \code{\link{linreg}}]
 }
 \description{
 Create a linreg object

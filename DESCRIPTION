@@ -6,10 +6,11 @@ Author: Group 25
 Maintainer: The package maintainer <muhammaduzair751@gmail.com>, <iu68559@gmail.com>, <ishtiaqahmad0331@gmail.com>
 Description: This package used to calcuate linear regression and creates a new class called "Linreg". It consists on an alternative implemantation of the linear regression algorithm.
 License: GPL (>= 3)
+Depends: R (>= 3.0.1)
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.2
 Roxygen: list(markdown = TRUE)
-Suggests: knitr,rmarkdown,testthat (>= 3.0.0),ggplot2
-Imports: ggplot2
+Imports: ggplot2,methods
+Suggests: knitr,rmarkdown,testthat (>= 3.0.0)
 VignetteBuilder: knitr

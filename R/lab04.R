@@ -20,10 +20,10 @@
 #' @field sqrtstresiduals .
 #' @field export_formula .
 #' @field export_data .
-#' @import ggplot2
 #' @param formula formula for linear model
 #' @param data the dataset provided
-#' @return the output from the \code{\link{linreg}}
+#' @import methods
+#' @return the output from the \code{\link{linreg}}]
 #' @importFrom ggplot2 theme_linedraw theme element_blank element_text stat_summary ggtitle xlab scale_x_continuous ggplot aes geom_point geom_smooth labs %+replace% theme_bw rel element_rect element_text element_line margin unit
 #' @exportClass linreg
 #' @export linreg
@@ -152,7 +152,6 @@ linreg <- setRefClass("linreg",
                           secondary_plot <- secondary_plot + stat_summary(fun=median, colour="red", geom="line", aes(group = 1))
                           secondary_plot <- secondary_plot + ggtitle("Scale-Location") + xlab(paste("Fitted values \n lm(Petal.Length ~ Species)"))
                           secondary_plot <- secondary_plot + scale_x_continuous(breaks = seq(0.0, 1.5, by= 0.5))
-
                           plotlist <- list(initial_plot, secondary_plot)
                           return(plotlist)
                         },
@@ -186,5 +185,4 @@ linreg <- setRefClass("linreg",
                           cat("Residual standard error:", round(sqrt(resid_var), 3), "on", deg_freedom, "degrees of freedom")
                         }
                       ))
-
 
